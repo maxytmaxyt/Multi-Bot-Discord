@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Version Log</h1>
+    <ul id="changelog-list">
+        <!-- Hier werden die Versionen geladen -->
+    </ul>
+
+    <script>
+        const versions = ['2.0.0', '1.1.0', '1.0.0'];
+        const list = document.getElementById('changelog-list');
+
+        versions.forEach(version => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="changelog/${version}.md" target="_blank">${version}</a>`;
+            list.appendChild(li);
+        });
+    </script>
+</body>
+</html>
